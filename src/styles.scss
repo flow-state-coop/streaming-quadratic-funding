@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+$primary: #2fc1c1;
+$secondary: #4b5588;
+$dark: #202333;
+$blue: #111320;
+$purple: #1a1c28;
+$info: #707179;
+$gray: #b8b8be;
+$aqua: #008281;
+$slate: #4c5f73;
+$yellow: #ffe100;
+$danger: #dc3545;
+$light: #f8f9fa;
+$success: #28a745;
+$warning: #f7bdbd;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "dark": $dark,
+  "blue": $blue,
+  "purple": $purple,
+  "info": $info,
+  "gray": $gray,
+  "aqua": $aqua,
+  "slate": $slate,
+  "yellow": $yellow,
+  "danger": $danger,
+  "light": $light,
+  "success": $success,
+  "warning": $warning,
+);
+
+$font-family-base: "Open Sans";
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base;
+$font-size-lg: $font-size-base;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: 22px;
+$h4-font-size: $font-size-base;
+$h5-font-size: 12px;
+$h6-font-size: 9px;
+
+$link-decoration: none;
+$link-hover-decoration: underline;
+$tooltip-arrow-height: 0.2rem;
+$dropdown-item-padding-y: 0.4rem;
+$dropdown-border-radius: 6px;
+$dropdown-dark-color: $gray;
+$dropdown-dark-bg: $dark;
+$dropdown-dark-link-hover-color: $light;
+$dropdown-dark-link-hover-bg: $secondary;
+$accordion-bg: $blue;
+$accordion-icon-color: $light;
+$accordion-icon-active-color: $light;
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("/fonts/SF-Pro-Rounded-Regular.otf");
+}
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": (
+      property: width,
+      class: w,
+      responsive: true,
+      values: (
+        10: 10%,
+        20: 20%,
+        25: 25%,
+        33: 33%,
+        50: 50%,
+        66: 66%,
+        75: 75%,
+        90: 90%,
+        100: 100%,
+        auto: auto,
+      ),
+    ),
+  )
+);
+
+@import "bootstrap/scss/utilities/api";
+
+html,
+body {
+  overscroll-behavior: none;
+  background: $purple;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.intercom-lightweight-app-launcher.intercom-launcher {
+  right: 2%;
+}
+
+.accordion-button {
+  background: $dark !important;
+  color: $light !important;
+}
+
+.form-control::placeholder {
+  color: $info !important;
+}
+
+.fixed-top {
+  z-index: 500;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+.modal-content {
+  overflow: hidden;
+}
+
+.tooltip-inner {
+  max-width: 300px;
+  text-align: left;
+}
+
+.bs-tooltip-bottom {
+  top: 8px !important;
+}
+
+.btn {
+  color: $light !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.dropdown-selected:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.transak_modal {
+  z-index: 1100 !important;
+}
+
+.underline-hover:hover {
+  text-decoration: underline;
+}
+
+.pulsate {
+  animation: pulsate 2s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+@keyframes pulsate {
+  50% {
+    opacity: 0;
+  }
+}
+
+.grantee-path {
+  fill: none;
+  stroke: white;
+}
+
+.dropdown-custom-arrow.dropdown-toggle::after {
+  display: none !important;
+}
